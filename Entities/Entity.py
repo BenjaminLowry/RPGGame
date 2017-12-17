@@ -6,6 +6,8 @@ class Entity(object):
         speed = 0
         strength = 0
         intelligence = 0
+        cognitiveAbility = 0
+        hostility = False
 
 
 
