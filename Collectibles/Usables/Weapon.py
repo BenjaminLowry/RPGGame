@@ -1,5 +1,6 @@
-from Collectables.Usables.Usable import Usable
+from Collectibles.Usables.Usable import Usable
 from Entities.Entity import Entity
+
 
 class Weapon(Usable):
 
@@ -15,7 +16,6 @@ class Weapon(Usable):
 
         self.durability = 1  # From 0 to 1; the inverse of the probability of it breaking after one use
         self.durabilityDecayConstant = 0.01  # How much the durability constant decreases with each use
-
 
     def use(self, object):
 

@@ -6,6 +6,4 @@ class Scene:
         self.openingDescription = ""
         self.objects = []
         self.exits = []  # [Object: Scene]
-        self.usables = []
-        # self.consumables = []
-        # self.
+        self.collectables = []  # [Collectable]

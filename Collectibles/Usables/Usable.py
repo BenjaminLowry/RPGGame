@@ -1,12 +1,11 @@
 from Entities.Entity import Entity
+from Collectibles.Collectible import Collectible
 
-
-class Usable:
+class Usable(Collectible):
 
     def __init__(self):
-        self.name = ""
-        self.weight = 0
-        self.description = ""
+
+        super().__init__()
         self.range = 0
 
     # Perform function for specific usable
