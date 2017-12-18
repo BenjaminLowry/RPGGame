@@ -1,3 +1,7 @@
 from Entities.Human import Human
+
 class User(Human):
-    super.intelligence = 1.2
+    def __init__(self, *args, **kwargs):
+        super().__init__()
+        super.intelligence = 1.2
+
