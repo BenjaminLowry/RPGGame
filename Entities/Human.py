@@ -2,6 +2,7 @@ from Entities.Entity import Entity
 
 class Human(Entity):
     def __init__(self, *args, **kwargs):
+        super().__init__()
         super.health = 100
         self.fatigue = super.health/100
         super.naturalDamage = super.strength/2
