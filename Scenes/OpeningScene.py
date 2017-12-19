@@ -1,4 +1,4 @@
-from Scenes.Scene import Scene
+from
 from Locations.Location import Location
 from Objects.Window import Window
 from Objects.Bed import Bed
@@ -19,7 +19,7 @@ class OpeningScene(Scene):
 
         bed = Bed(None)
 
-
+        bed =
 
         # exit = [window: scene2]
 
