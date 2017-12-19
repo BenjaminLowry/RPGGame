@@ -1,6 +1,8 @@
 from Scenes.Scene import Scene
 from Locations.Location import Location
 from Objects.Object import Object
+from Objects.Window import Window
+from Objects.Bed import Bed
 
 class OpeningScene(Scene):
 
@@ -12,9 +14,11 @@ class OpeningScene(Scene):
 
         openingDescription = open("OpeningScene.txt", "r").read()
 
-        window = Object("A dirty window half-covered with old drapes. Can't seem much outside. It is daytime though.",
-                        None)
-        bed = Object("A metal bed frame with old mattress on it. Some mysterious stains present.")
+        window = Window(None)
+        window.override_description("A dirty window half-covered with old drapes. Can't seem much outside. "
+                                    "It is daytime though.")
+
+        bed = Bed(None)
 
         super()._
 

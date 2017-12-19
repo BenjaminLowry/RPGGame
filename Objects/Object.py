@@ -6,4 +6,6 @@ class Object:
         self.description = description
         self.collectibles = collectibles  # [Collectible]
 
+    def override_description(self, description):
 
+        self.description = description
