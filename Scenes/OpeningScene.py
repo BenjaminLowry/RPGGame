@@ -1,6 +1,5 @@
 from Scenes.Scene import Scene
 from Locations.Location import Location
-from Objects.Object import Object
 from Objects.Window import Window
 from Objects.Bed import Bed
 
@@ -10,7 +9,7 @@ class OpeningScene(Scene):
 
         location = Location("Bedroom", "You woke up here. You don't know why.", "------"
                             "|    |"
-                            "------", (0, 0))
+                            "------", (1, 1))
 
         openingDescription = open("OpeningScene.txt", "r").read()
 
@@ -20,7 +19,11 @@ class OpeningScene(Scene):
 
         bed = Bed(None)
 
-        super()._
+
+
+        # exit = [window: scene2]
+
+        super().__init__()
 
 
 

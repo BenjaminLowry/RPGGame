@@ -5,7 +5,6 @@ class Scene:
         self.location = location  # Location
         self.openingDescription = openingDescription
         self.objects = objects  # [Object]
-        self.objectDescriptions = objectDescriptions  # [Object: String]
         self.exits = exits  # [Object: Scene]
         self.collectibles = collectibles  # [Collectible] -- Does not include collectibles inside objects
         self.entities = entities  # [Entity]
