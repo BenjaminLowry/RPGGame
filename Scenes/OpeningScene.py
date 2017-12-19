@@ -1,7 +1,10 @@
-from
+from Scenes.Scene import Scene
+from Scenes.BalconyScene import BalconyScene
 from Locations.Location import Location
 from Objects.Window import Window
 from Objects.Bed import Bed
+from Objects.Dresser import Dresser
+from Collectibles.Usables.Weapons.Pipe import Pipe
 
 class OpeningScene(Scene):
 
@@ -17,13 +20,18 @@ class OpeningScene(Scene):
         window.override_description("A dirty window half-covered with old drapes. Can't seem much outside. "
                                     "It is daytime though.")
 
-        bed = Bed(None)
+        rustedPipe = Pipe()
 
-        bed =
+        bed = Bed(rustedPipe)
+        dresser = Dresser(None)
 
-        # exit = [window: scene2]
+        balconyScene = BalconyScene()
 
-        super().__init__()
+        exit = {window: balconyScene}
+
+        super().__init__(location, openingDescription, [window, bed, dresser], exit, None, None)
+
+
 
 
 
