@@ -1,6 +1,10 @@
 from Scenes.Scene import Scene
+from Scenes.BalconyScene import BalconyScene
 from Locations.Location import Location
-from Objects.Object import Object
+from Objects.Window import Window
+from Objects.Bed import Bed
+from Objects.Dresser import Dresser
+from Collectibles.Usables.Weapons.Pipe import Pipe
 
 class OpeningScene(Scene):
 
@@ -8,18 +12,27 @@ class OpeningScene(Scene):
 
         self.location = Location("Bedroom", "You woke up here. You don't know why.", "------"
                             "|    |"
-                            "------", (0, 0))
+                            "------", (1, 1))
 
         self.openingDescription = open("OpeningScene.txt", "r").read()
 
-        self.window = Object("A dirty window half-covered with old drapes. Can't seem much outside. It is daytime though.",
-                        None)
-        self.bed = Object("A metal bed frame with old mattress on it. Some mysterious stains present.")
+        window = Window(None)
+        window.override_description("A dirty window half-covered with old drapes. Can't see much outside. "
+                                    "It is daytime though.")
 
-        self.openingDescript = ["You wake up in a dimly lit room. You're laying on a bed.", "Hmm... there aren't sheets on the bed.", 'Small strands of sunlight illuminate the wall to your right.', 'There’s a socket on the ceiling where a lightbulb used to be. To the left of the bed there’s a dresser. One of its handles is broken.', 'There’s a white wooden door on the other side of the room. It’s shut.', 'You hear a growling noise off in the distance.']
+        rustedPipe = Pipe()
+
+        bed = Bed(rustedPipe)
+        dresser = Dresser(None)
+
+        balconyScene = BalconyScene()
+
+        exit = {window: balconyScene}
+
+        super().__init__(location, openingDescription, [window, bed, dresser], exit, None, None)
 
 
-        super()._
+
 
 
 
