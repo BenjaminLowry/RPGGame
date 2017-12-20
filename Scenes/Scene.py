@@ -11,6 +11,9 @@ class Scene:
         self.collectibles = collectibles  # [Collectible] -- Does not include collectibles inside objects
         self.entities = entities  # [Entity]
 
+    def get_opening_description(self):
+        return self.openingDescription.split(". ")
+ 
     def parse(self, commandText):
 
         (command, objectName) = str(commandText).lower().split(":")
@@ -24,13 +27,15 @@ class Scene:
                 break
 
         if command == "go to":
-            self.go_to(selectedObject)
+            return self.go_to(selectedObject)
         elif command == "look under":
-
+            pass
 
     def go_to(self, object):
 
-        return object.description
+        descriptionArray = object.description.split(". ")
+        return descriptionArray
+
 
 
 

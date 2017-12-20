@@ -6,6 +6,7 @@ from Objects.Bed import Bed
 from Objects.Dresser import Dresser
 from Collectibles.Usables.Weapons.Pipe import Pipe
 
+
 class OpeningScene(Scene):
 
     def __init__(self):
