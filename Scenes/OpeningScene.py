@@ -17,7 +17,7 @@ class OpeningScene(Scene):
         openingDescription = open("OpeningScene.txt", "r").read()
 
         window = Window(None)
-        window.override_description("A dirty window half-covered with old drapes. Can't seem much outside. "
+        window.override_description("A dirty window half-covered with old drapes. Can't see much outside. "
                                     "It is daytime though.")
 
         rustedPipe = Pipe()
