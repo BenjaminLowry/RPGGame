@@ -26,9 +26,3 @@ class Weapon(Usable):
 
         print("It is a weapon.")
 
-
-weapon = Weapon()
-
-entity = Entity()
-
-weapon.use(entity)
