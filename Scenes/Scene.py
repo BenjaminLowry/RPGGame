@@ -3,7 +3,7 @@
 
 class Scene:
 
-    def __init__(self, location, openingDescription, objects, objectDescriptions, exits, collectibles, entities):
+    def __init__(self, location, openingDescription, objects, exits, collectibles, entities):
         self.location = location  # Location
         self.openingDescription = openingDescription
         self.objects = objects  # [Object]
