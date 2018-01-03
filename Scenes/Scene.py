@@ -3,13 +3,14 @@
 
 class Scene:
 
-    def __init__(self, location, openingDescription, objects, exits, collectibles, entities):
+    def __init__(self, location, openingDescription, objects, exits, collectibles, entities, userPosition):
         self.location = location  # Location
         self.openingDescription = openingDescription
         self.objects = objects  # [Object]
         self.exits = exits  # {Object: Scene}
         self.collectibles = collectibles  # [Collectible] -- Does not include collectibles inside objects
         self.entities = entities  # [Entity]
+        self.userPosition = userPosition
 
     def get_opening_description(self):
         return self.openingDescription.split(". ")
@@ -39,6 +40,7 @@ class Scene:
         if command == "go to":
             return self.go_to(selectedObject)
         elif command == "look under":
+            if
             pass
         else:  # If the command is invalid, throw error
             return errorMessage

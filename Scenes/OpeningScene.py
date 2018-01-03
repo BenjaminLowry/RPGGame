@@ -32,7 +32,7 @@ class OpeningScene(Scene):
 
         exit = {window: balconyScene}
 
-        super().__init__(self.location, self.openingDescription, [window, bed, dresser], exit, None, None)
+        super().__init__(self.location, self.openingDescription, [window, bed, dresser], exit, None, None, bed)
 
 
 

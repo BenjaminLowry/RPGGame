@@ -13,18 +13,18 @@ class Object:
 
         self.description = description
 
-    def search_object(self, method):
+    def search_object(self, searchMethod):
 
         foundObjects = []
         for (collectible, hiddenType) in self.collectibles:
 
-            if hiddenType == method:
+            if hiddenType == searchMethod:
                 foundObjects.append(collectible)
 
         if foundObjects.count() == 0:
-            return None, "There was nothing " + str(method).lower() + " the " + self.name.lower()
+            return None, "There was nothing " + str(searchMethod).lower() + " the " + self.name.lower()
         else:
-            message = str(method) + " the " + self.name.lower() + ", you found a "
+            message = str(searchMethod) + " the " + self.name.lower() + ", you found a "
 
             # Loop through objects to generate string declaring what you found by searching
             for i in range(0, foundObjects.count()):

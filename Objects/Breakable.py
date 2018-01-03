@@ -1,8 +1,6 @@
-from abc import abstractmethod, ABCMeta
+
 
 class Breakable:
-    __metaclass__ = ABCMeta
 
-    @abstractmethod
-    def breakObject(self):
-        pass
+    def breakObject(self, object, searchMethod):
+        return object.search_object(searchMethod)
